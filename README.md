@@ -66,14 +66,10 @@ The complete attack, detection, and investigation are demonstrated in the video 
 
 ###  Screenshots
 
-**1. The Attack (CrackMapExec from Kali):**
-![CrackMapExec Attack](1-crackmapexec-attack.png)
+![CrackMapExec Attack](screenshots/1-crackmapexec-attack.png)
+![Wazuh Detection](screenshots/2-wazuh-detection-60122.png)
+![Attacker IP Caught](screenshots/3-attacker-ip-caught.png)
 
-**2. Wazuh Detection (Rule 60122 - Windows Logon Failure):**
-![Wazuh Detection](2-wazuh-detection-60122.png)
-
-**3. Attacker IP Investigation (JSON Event Details):**
-![Attacker IP Caught](3-attacker-ip-caught.png)
 
 ###  Additional Evidence
 - **MITRE ATT&CK Mapping:** T1110 (Brute Force), with a defensive mapping to T1531 (Account Access Removal)
