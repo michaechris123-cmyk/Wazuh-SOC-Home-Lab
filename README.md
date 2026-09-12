@@ -2,7 +2,7 @@
 
 ##  Video Walkthrough
 
-[![Wazuh SOC Lab Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![Wazuh SOC Lab Demo](https://img.youtube.com/vi/52X5DkCZmeg/0.jpg)](https://www.youtube.com/watch?v=52X5DkCZmeg)
 
 *Watch the full attack and detection in action.*
 
@@ -44,13 +44,14 @@ The Wazuh dashboard detected the attack in real-time. **Rule ID 60122 ("Windows 
 ### 4. Investigation
 Clicked into a Rule 60122 alert and examined the JSON event data. Identified the **attacker's source IP (192.168.100.22)** in the `data.win.eventdata.ipAddress` field, confirming the origin of the attack.
 
-## 🎯 Key Findings
+##  Key Findings
 - Wazuh successfully detected the brute-force attack via Rule ID 60122.
 - The attacker's IP address was captured in the Windows Security Event Log (Event ID 4625).
 - The attack targeted the `Administrator` account over SMB (Port 445).
-- This maps to **MITRE ATT&CK T1110 (Brute Force)**.
+- This maps to **MITRE ATT&CK T1110 (Brute Force)** — the primary technique.
+- Wazuh also mapped the alert to **T1531 (Account Access Removal)** as a defensive warning, since continued failed logons could lead to account lockout.
 
-## 🛡️ Defensive Recommendations
+##  Defensive Recommendations
 1. **Account Lockout Policy:** Configure Windows to lock accounts after 5 failed attempts.
 2. **Disable SMBv1:** Ensure legacy SMB protocols are disabled.
 3. **Network Segmentation:** Restrict SMB traffic to trusted hosts only.
