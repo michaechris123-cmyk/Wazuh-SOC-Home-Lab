@@ -59,12 +59,31 @@ Clicked into a Rule 60122 alert and examined the JSON event data. Identified the
 5. **MFA & Strong Passwords:** Enforce complex passwords and multi-factor authentication.
 6. **IPS/IDS:** Deploy network-based intrusion prevention to auto-block brute-force sources.
 
-## 📸 Proof of Work
+##  Proof of Work
+
+###  Full Video Walkthrough
+The complete attack, detection, and investigation are demonstrated in the video at the top of this README.
+
+###  Screenshots
+
+**1. The Attack (CrackMapExec from Kali):**
 ![CrackMapExec Attack](1-crackmapexec-attack.png)
+
+**2. Wazuh Detection (Rule 60122 - Windows Logon Failure):**
 ![Wazuh Detection](2-wazuh-detection-60122.png)
+
+**3. Attacker IP Investigation (JSON Event Details):**
 ![Attacker IP Caught](3-attacker-ip-caught.png)
 
-## 🎓 Skills Demonstrated
+###  Additional Evidence
+- **MITRE ATT&CK Mapping:** T1110 (Brute Force), with a defensive mapping to T1531 (Account Access Removal)
+- **Windows Event ID:** 4625 (Failed Logon)
+- **Logon Type:** 3 (Network Logon - SMB)
+- **Attacker IP:** 192.168.100.22 (Kali Linux)
+- **Victim IP:** 192.168.100.12 (Windows 10 Extra Desktop)
+- **Detection Rule:** Wazuh Rule 60122
+- 
+##  Skills Demonstrated
 - SIEM Deployment & Configuration
 - Agent Deployment (Windows Endpoints)
 - Threat Detection & Alert Triage
