@@ -39,7 +39,7 @@ From the Kali attacker machine, launched an SMB brute-force attack against the W
 The tool attempted hundreds of passwords from the `rockyou.txt` wordlist, generating `STATUS_LOGON_FAILURE` responses.
 
 ### 3. Detection (Wazuh)
-The Wazuh dashboard detected the attack in real-time. **Rule ID 60122 ("Windows Logon Failure")** was triggered for each failed attempt. Over 39 authentication failures were recorded within a short time window.
+The Wazuh dashboard detected the attack in real-time. **Rule ID 60122 ("Windows Logon Failure")** was triggered for each failed attempt. Over 800 authentication failures were recorded within a short time window.
 
 ### 4. Investigation
 Clicked into a Rule 60122 alert and examined the JSON event data. Identified the **attacker's source IP (192.168.100.22)** in the `data.win.eventdata.ipAddress` field, confirming the origin of the attack.
